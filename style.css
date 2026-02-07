@@ -18,7 +18,7 @@ body {
 }
 
 .title {
-    font-family: 'Sacramento', cursive;
+    font-family: 'Goudy Old Style';
     font-size: 56px;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 #question {
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
+    font-family: 'Goudy Old Style'; /* Apply Sacramento font to the question */
     font-size: 52px; /* Set font size for the question */
 }
 
@@ -67,7 +67,7 @@ button {
     padding: 10px 20px; /* Set padding for buttons */
     margin: 0 10px; /* Set margin around buttons */
     font-size: 26px; /* Set font size for buttons */
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
+    font-family: 'Goudy Old Style'; /* Apply Sacramento font to the options */
     background-color: #102c15; /* Set button background color */
     color: white; /* Set text color to white */
     border: none; /* Remove button border */

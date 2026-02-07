@@ -23,7 +23,7 @@ function checkCrossword() {
     document.getElementById("minigame").style.display = "none";
     document.getElementById("container").classList.remove("hidden");
     document.getElementById("container").classList.add("visible");
-    displayCat();
+    displayKay();
 }
 
 // Function to handle button click events
@@ -33,7 +33,7 @@ function selectOption(option) {
         // Flash shades of green
         flashGreenColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
+            displayKayDance(); // Display the cat-heart.gif
         });
     } else if (option === 'no') {
         // Change text on the "No" button to "You sure?"
@@ -67,37 +67,48 @@ function flashGreenColors(callback) {
 }
 
 // Function to display the cat.gif initially
-function displayCat() {
+function displayKay() {
     // Get the container where the image will be displayed
     var imageContainer = document.getElementById('image-container');
     // Create a new Image element for the cat
-    var catImage = new Image();
+    var kayImage = new Image();
     // Set the source (file path) for the cat image
-    catImage.src = 'pleebs.gif'; // Assuming the cat image is named "cat.gif"
+    kayImage.src = 'pleebs.gif'; // Assuming the cat image is named "cat.gif"
     // Set alternative text for the image (for accessibility)
-    catImage.alt = 'Cat';
+    kayImage.alt = 'Kay';
     // When the cat image is fully loaded, add it to the image container
-    catImage.onload = function() {
-        imageContainer.appendChild(catImage);
+    kayImage.onload = function() {
+        imageContainer.appendChild(kayImage);
     };
 }
 
-// Function to display the cat-heart.gif
-function displayCatHeart() {
+// Function to display the kaydance.gif
+function displayKayDance() {
     // Clear existing content in the image container
     document.getElementById('image-container').innerHTML = '';
     // Get the container where the image will be displayed
     var imageContainer = document.getElementById('image-container');
-    // Create a new Image element for the cat-heart
-    var catHeartImage = new Image();
-    // Set the source (file path) for the cat-heart image
-    catHeartImage.src = 'pleeb.gif'; // Assuming the cat-heart image is named "cat-heart.gif"
+    // Create a new Image element for the gif
+    var kayDanceImage = new Image();
+    // Set the source (file path) for the gif
+    kayDanceImage.src = 'kaydance.gif'; // source name for gif
     // Set alternative text for the image (for accessibility)
-    catHeartImage.alt = 'Cat Heart';
-    // When the cat-heart image is fully loaded, add it to the image container
-    catHeartImage.onload = function() {
-        imageContainer.appendChild(catHeartImage);
+    kayDanceImage.alt = 'Kay Dance';
+    // When the kaydance image is fully loaded, add it to the image container
+    kayDanceImage.onload = function() {
+        imageContainer.appendChild(kayDanceImage);
         // Hide the options container
         document.getElementById('options').style.display = 'none';
+        var link = document.createElement('a');
+        link.href = "https://youtu.be/jq5me8JCPZY?si=e2jkM9AXhudBacrP";  
+        link.innerText = "Totally not suspicious";
+        link.style.display = "block";
+        link.style.marginTop = "20px";
+        link.style.fontSize = "24px";
+        link.style.color = "red";
+        link.style.fontFamily = "'Goudy Old Style'";
+
+        imageContainer.appendChild(link);
+
     };
 }
