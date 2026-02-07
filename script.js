@@ -22,6 +22,7 @@ function checkCrossword() {
     // If all answers are correct
     document.getElementById("minigame").style.display = "none";
     document.getElementById("container").classList.remove("hidden");
+    document.getElementById("container").classList.add("visible");
     displayCat();
 }
 
@@ -100,6 +101,3 @@ function displayCatHeart() {
         document.getElementById('options').style.display = 'none';
     };
 }
-
-// Display the cat.gif initially
-displayCat();

@@ -7,9 +7,6 @@ body {
     background-color: #374e16; /* Set background color to green */
 }
 
-.hidden {
-    display: none;
-}
 
 /*crossword */
 #minigame {
@@ -40,11 +37,17 @@ body {
 }
 
 #container {
-    display: flex; /* Use flexbox layout */
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center-align items horizontally */
     justify-content: center; /* Center-align items vertically */
-    height: 100vh; /* Make the container full viewport height */
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display:flex
 }
 
 #image-container {
