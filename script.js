@@ -1,6 +1,30 @@
 script.js
 // script.js
 
+// ===== CROSSWORD LOGIC =====
+function checkCrossword() {
+    const answers = {
+        word1: "halloween",
+        word2: "natick",
+        word3: "texas",
+        word4: "monday"
+    };
+
+    for (let key in answers) {
+        const value = document.getElementById(key).value.trim().toLowerCase();
+        if (value !== answers[key]) {
+            document.getElementById("error").innerText =
+                "Try that again.. ";
+            return;
+        }
+    }
+
+    // If all answers are correct
+    document.getElementById("minigame").style.display = "none";
+    document.getElementById("container").classList.remove("hidden");
+    displayCat();
+}
+
 // Function to handle button click events
 function selectOption(option) {
     // Check which option was clicked
@@ -48,7 +72,7 @@ function displayCat() {
     // Create a new Image element for the cat
     var catImage = new Image();
     // Set the source (file path) for the cat image
-    catImage.src = 'pleeb.gif'; // Assuming the cat image is named "cat.gif"
+    catImage.src = 'pleebs.gif'; // Assuming the cat image is named "cat.gif"
     // Set alternative text for the image (for accessibility)
     catImage.alt = 'Cat';
     // When the cat image is fully loaded, add it to the image container
@@ -78,6 +102,4 @@ function displayCatHeart() {
 }
 
 // Display the cat.gif initially
-document.addEventListener('DOMContentLoaded', () => {
-    displayCat();
-});
+displayCat();
